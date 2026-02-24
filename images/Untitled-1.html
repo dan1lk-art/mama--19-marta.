@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Premium Experience | 2026</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --text: #ffffff;
+            --accent: #ff3e00;
+            --gray: #222;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* --- КУРСОР --- */
+        .cursor-follower {
+            position: fixed;
+            width: 40px; height: 40px;
+            border: 1px solid var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transition: transform 0.1s ease, background 0.3s ease;
+        }
+
+        /* --- НАВИГАЦИЯ --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 30px 50px;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; mix-blend-mode: difference;
+        }
+        .logo { font-family: 'Syncopate'; font-weight: 700; font-size: 1.5rem; }
+        .menu-btn { cursor: pointer; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+
+        /* --- ГЛАВНАЯ СЕКЦИЯ --- */
+        .hero {
+            height: 100vh; width: 100%;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 12vw; font-family: 'Syncopate';
+            line-height: 0.9; text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-sub {
+            margin-top: 20px; font-size: 1rem; color: var(--accent);
+            text-transform: uppercase; letter-spacing: 5px;
+        }
+
+        /* --- ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ --- */
+        .h-wrap { overflow: hidden; background: #000; }
+        .h-content { display: flex; width: 400vw; height: 100vh; }
+        
+        .panel {
+            width: 100vw; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            position: relative; padding: 10vw;
+        }
+
+        .panel-num {
+            position: absolute; top: 10%; left: 5%;
+            font-size: 10vw; font-family: 'Syncopate';
+            opacity: 0.1; -webkit-text-stroke: 1px white; color: transparent;
+        }
+
+        .img-box {
+            width: 40vw; height: 50vh;
+            background: var(--gray); position: relative;
+            overflow: hidden; border-radius: 5px;
+        }
+
+        .img-box img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+
+        /* --- ТЕКСТОВЫЕ БЛОКИ --- */
+        .text-section { padding: 20vh 10vw; }
+        .reveal-large { font-size: 5vw; font-weight: 900; margin-bottom: 50px; }
+
+        /* --- ФУТЕР --- */
+        footer {
+            padding: 100px 50px; border-top: 1px solid var(--gray);
+            text-align: center;
+        }
+
+        /* Утилиты для SplitType */
+        .char { display: inline-block; transform: translateY(110%); }
+    </style>
+</head>
+<body>
+
+    <div class="cursor-follower"></div>
+
+    <nav>
+        <div class="logo">GEMINI.DEV</div>
+        <div class="menu-btn">Menu [ ]</div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title reveal-type">MODERN<br>LEGACY</h1>
+        <p class="hero-sub">Experimental Design Studio</p>
+    </section>
+
+    <div class="h-wrap">
+        <div class="h-content">
+            <section class="panel">
+                <div class="panel-num">01</div>
+                <div class="img-box"><img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=1000" alt=""></div>
+                <div style="margin-left: 50px;">
+                    <h2 class="reveal-type">CRAFT</h2>
+                    <p>Внимание к каждой детали кода</p>
+                </div>
+            </section>
+            
+            <section class="panel">
+                <div class="panel-num">02</div>
+                <div class="img-box"><img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&w=1000" alt=""></div>
+                <div style="margin-left: 50px;">
+                    <h2 class="reveal-type">MOTION</h2>
+                    <p>Плавность — это база</p>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-num">03</div>
+                <div class="img-box"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000" alt=""></div>
+                <div style="margin-left: 50px;">
+                    <h2 class="reveal-type">FUTURE</h2>
+                    <p>Технологии завтрашнего дня</p>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-num">04</div>
+                <h2 class="reveal-type" style="font-size: 8vw;">THE END?</h2>
+            </section>
+        </div>
+    </div>
+
+    <section class="text-section">
+        <h2 class="reveal-large reveal-type">МЫ СОЗДАЕМ ЦИФРОВЫЕ МИРЫ, КОТОРЫЕ ВДОХНОВЛЯЮТ И МЕНЯЮТ ПРЕДСТАВЛЕНИЕ О ВЕБЕ.</h2>
+    </section>
+
+    <footer>
+        <p>© 2026 Твой Проект. Сделано с ИИ.</p>
+    </footer>
+
+    <script>
+        // --- ИНИЦИАЛИЗАЦИЯ ПЛАВНОГО СКРОЛЛА ---
+        const lenis = new Lenis({
+            lerp: 0.1, // Плавность (0-1)
+            wheelMultiplier: 1.2
+        });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // --- КУРСОР ---
+        const follower = document.querySelector('.cursor-follower');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(follower, {
+                x: e.clientX - 20,
+                y: e.clientY - 20,
+                duration: 0.6,
+                ease: "power2.out"
+            });
+        });
+
+        // --- SPLIT TEXT & ANIMATION ---
+        // Ждем загрузки всех ресурсов
+        window.addEventListener('load', () => {
+            const splitTargets = document.querySelectorAll('.reveal-type');
+            
+            splitTargets.forEach(el => {
+                const res = new SplitType(el, { types: 'chars' });
+                
+                gsap.to(res.chars, {
+                    translateY: 0,
+                    stagger: 0.02,
+                    duration: 1,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+        });
+
+        // --- ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ ---
+        const sections = gsap.utils.toArray(".panel");
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".h-wrap",
+                pin: true,
+                scrub: 1,
+                // Длительность зависит от количества панелей
+                end: () => "+=" + document.querySelector(".h-content").offsetWidth
+            }
+        });
+
+        // --- ПАРАЛЛАКС ДЛЯ ИЗОБРАЖЕНИЙ ---
+        document.querySelectorAll('.img-box img').forEach(img => {
+            gsap.to(img, {
+                scale: 1.2,
+                filter: "grayscale(0)",
+                scrollTrigger: {
+                    trigger: img,
+                    scrub: true
+                }
+            });
+        });
+
+        // --- ЭФФЕКТ ДЛЯ ЛОГОТИПА ПРИ СКРОЛЛЕ ---
+        gsap.to(".logo", {
+            letterSpacing: "15px",
+            scrollTrigger: {
+                trigger: ".hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+    </script>
+</body>
+</html>

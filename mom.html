@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для Самой Лучшей Мамы | 2026</title>
+    
+    <link rel="stylesheet" href="mom-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@400;700&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="gift-overlay" id="overlay">
+    <div class="overlay-content">
+        <div class="neon-heart-wrapper">
+            <svg class="neon-heart" viewBox="0 0 500 500">
+                <path d="M250 450 c-20 -20 -200 -180 -200 -280 0 -80 60 -130 130 -130 40 0 70 20 70 20 s30 -20 70 -20 c70 0 130 50 130 130 0 100 -180 260 -200 280z" />
+            </svg>
+            <h1 class="door-title">ДЛЯ ТЕБЯ</h1>
+            <button class="open-btn" onclick="startExperience()">Открыть сердце</button>
+        </div>
+    </div>
+</div>
+
+    <div class="magic-cursor"></div>
+
+    <main class="main-wrapper" id="content">
+        
+        <section class="hero-mom">
+            <div class="glow-sphere"></div>
+            <div class="hero-text">
+                <span class="pre-title">С Днем Рождения,</span>
+                <h1 class="mom-name">МАМА</h1>
+            </div>
+            <div class="main-photo-frame">
+                <img src="images/mom_main.jpg" alt="Мама" class="main-img">
+            </div>
+        </section>
+
+        <section class="mom-marquee">
+            <div class="marquee-inner">
+                <span>ЛЮБИМАЯ • НЕЖНАЯ • САМАЯ ДОБРАЯ • КРАСИВАЯ • МОЯ ОПОРА •&nbsp;</span>
+                <span>ЛЮБИМАЯ • НЕЖНАЯ • САМАЯ ДОБРАЯ • КРАСИВАЯ • МОЯ ОПОРА •&nbsp;</span>
+            </div>
+        </section>
+
+        <section class="memory-grid">
+            <div class="container">
+                <div class="memory-card reveal">
+                    <div class="memory-img">
+                        <img src="images/mom_memory1.jpg" alt="Memory 1">
+                    </div>
+                    <div class="memory-info">
+                        <h3>Твоя улыбка</h3>
+                        <p>Она согревает даже в самые холодные дни.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card reveal">
+                    <div class="memory-info">
+                        <h3>Твоя мудрость</h3>
+                        <p>Спасибо за каждый совет и каждое теплое слово.</p>
+                    </div>
+                    <div class="memory-img">
+                        <img src="images/mom_memory2.jpg" alt="Memory 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-letter">
+            <div class="letter-box">
+                <h2 class="letter-title">Моё послание</h2>
+                <p class="letter-text">
+                    Мама, ты — мой главный пример и вдохновение. 
+                    Пусть этот день будет наполнен светом, как и ты сама. 
+                    Я тебя очень сильно люблю!
+                </p>
+                <div class="signature">Твой сын</div>
+            </div>
+        </section>
+
+    </main>
+<section class="book-section">
+    <button class="open-book-btn" onclick="openAlbum()">Открыть наш альбом</button>
+</section>
+
+<div class="book-container">
+    <div class="book-page">
+        <img src="images/mom_1.jpg" alt="Memory 1">
+        <p class="page-caption">Ваше День Рождения</p>
+    </div>
+
+    <div class="book-page">
+        <img src="images/mom_2.jpg" alt="Memory 2">
+        <p class="page-caption">Здесь Мы Проводили Новый Год</p>
+    </div>
+
+    <div class="book-page">
+        <img src="images/mom_3.jpg" alt="Memory 3">
+        <p class="page-caption">Это Мы Все Вместе В Астане</p>
+    </div>
+
+    <div class="book-page">
+        <img src="images/mom_4.jpg" alt="Memory 4">
+        <p class="page-caption">Мы Все В Дне Рождений Димаша</p>
+    </div>
+
+    <div class="book-page">
+        <img src="images/mom_5.jpg" alt="Memory 5">
+        <p class="page-caption">Здесь Мы Были В Летающем Театре   </p>
+    </div>
+</div>
+    <audio id="bg-music" loop>
+        <source src="mom-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <script src="mom-script.js"></script>
+</body>
+</html>
